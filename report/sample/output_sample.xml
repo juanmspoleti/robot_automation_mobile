@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.4 on win32)" generated="20210820 20:18:09.724" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="C:\workspace\Pole\Mobile\robot_mobile_sample\tests">
+<suite id="s1-s1" name="Login Test" source="C:\workspace\Pole\Mobile\robot_mobile_sample\tests\login_test.robot">
+<test id="s1-s1-t1" name="Valid credentials">
+<kw name="Open App" library="android_local" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${HUB_URL}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>app=${APP}</arg>
+<arg>platformName=${platform}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20210820 20:18:09.890" endtime="20210820 20:18:16.620"/>
+</kw>
+<status status="PASS" starttime="20210820 20:18:09.890" endtime="20210820 20:18:16.620"/>
+</kw>
+<kw name="Scenario Outline: Valid credentials">
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<kw name="Given Login view is displayed" library="login_steps">
+<kw name="Login Page Opened" library="login_page">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${USERNAME_FIELD}</arg>
+<arg>timeout=20</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210820 20:18:16.621" endtime="20210820 20:18:18.217"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>${USERNAME_FIELD}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" starttime="20210820 20:18:18.218" endtime="20210820 20:18:18.252"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>${PASSWORD_FIELD}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" starttime="20210820 20:18:18.252" endtime="20210820 20:18:18.282"/>
+</kw>
+<status status="PASS" starttime="20210820 20:18:16.621" endtime="20210820 20:18:18.282"/>
+</kw>
+<status status="PASS" starttime="20210820 20:18:16.621" endtime="20210820 20:18:18.282"/>
+</kw>
+<kw name="When Set username input with ${user}" library="login_steps" sourcename="Set username input with ${user}">
+<kw name="Input Username" library="login_page">
+<arg>${user}</arg>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${USERNAME_FIELD}</arg>
+<arg>${user}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20210820 20:18:18.285" level="INFO">Typing text 'standard_user' into text field 'accessibility_id=test-Usuario'</msg>
+<status status="PASS" starttime="20210820 20:18:18.283" endtime="20210820 20:18:18.338"/>
+</kw>
+<status status="PASS" starttime="20210820 20:18:18.283" endtime="20210820 20:18:18.338"/>
+</kw>
+<status status="PASS" starttime="20210820 20:18:18.282" endtime="20210820 20:18:18.338"/>
+</kw>
+<kw name="And Set password input with ${password}" library="login_steps" sourcename="Set password input with ${password}">
+<kw name="Input Password" library="login_page">
+<arg>${password}</arg>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20210820 20:18:18.341" level="INFO">Typing text 'secret_sauce' into text field 'accessibility_id=test-Contraseña'</msg>
+<status status="PASS" starttime="20210820 20:18:18.339" endtime="20210820 20:18:19.369"/>
+</kw>
+<status status="PASS" starttime="20210820 20:18:18.338" endtime="20210820 20:18:19.369"/>
+</kw>
+<status status="PASS" starttime="20210820 20:18:18.338" endtime="20210820 20:18:19.369"/>
+</kw>
+<kw name="And Tap sign in" library="login_steps">
+<kw name="Tap Sign In Button" library="login_page">
+<kw name="Hide Keyboard" library="AppiumLibrary">
+<doc>Hides the software keyboard on the device. (optional) In iOS, use `key_name` to press
+a particular key, ex. `Done`. In Android, no parameters are used.</doc>
+<status status="PASS" starttime="20210820 20:18:19.369" endtime="20210820 20:18:19.555"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210820 20:18:19.557" level="INFO">Clicking element 'accessibility_id=test-LOGIN'.</msg>
+<status status="PASS" starttime="20210820 20:18:19.556" endtime="20210820 20:18:19.918"/>
+</kw>
+<status status="PASS" starttime="20210820 20:18:19.369" endtime="20210820 20:18:19.918"/>
+</kw>
+<status status="PASS" starttime="20210820 20:18:19.369" endtime="20210820 20:18:19.918"/>
+</kw>
+<kw name="Then Home view is displayed" library="home_steps">
+<kw name="Home Page Opened" library="home_page">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${ROTATE_BUTTON}</arg>
+<arg>timeout=20</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210820 20:18:19.919" endtime="20210820 20:18:21.049"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>${ROTATE_BUTTON}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" starttime="20210820 20:18:21.049" endtime="20210820 20:18:21.084"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>${FILTER_BUTTON}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" starttime="20210820 20:18:21.084" endtime="20210820 20:18:21.117"/>
+</kw>
+<status status="PASS" starttime="20210820 20:18:19.919" endtime="20210820 20:18:21.118"/>
+</kw>
+<status status="PASS" starttime="20210820 20:18:19.919" endtime="20210820 20:18:21.118"/>
+</kw>
+<status status="PASS" starttime="20210820 20:18:16.620" endtime="20210820 20:18:21.118"/>
+</kw>
+<kw name="Quit Application" library="AppiumLibrary" type="TEARDOWN">
+<doc>Quit application. Application can be quit while Appium session is kept alive.
+This keyword can be used to close application during test case or between test cases.</doc>
+<status status="PASS" starttime="20210820 20:18:21.118" endtime="20210820 20:18:21.223"/>
+</kw>
+<doc>Login correcto con usuario y contraseña</doc>
+<tag>smoke</tag>
+<status status="PASS" starttime="20210820 20:18:09.889" endtime="20210820 20:18:21.223"/>
+</test>
+<status status="PASS" starttime="20210820 20:18:09.744" endtime="20210820 20:18:21.226"/>
+</suite>
+<status status="PASS" starttime="20210820 20:18:09.725" endtime="20210820 20:18:21.228"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Login Test">Tests.Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,5 @@
+.vscode
+report/*.png
+report/log.html
+report/output.xml
+report/report.html
