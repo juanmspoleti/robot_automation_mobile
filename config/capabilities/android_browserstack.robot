@@ -1,5 +1,5 @@
 *** Variables ***
-${APP}            bs://7dfe6422e4db2386b5df5e93efd4d4bc860d0333
+${APP}            bs://ef256b3a275f25d76863c23df751d993c93a9f1f
 ${DEVICE}         Google Pixel 3
 ${OS_VERSION}     10.0
 ${APP_PACKAGE}    com.epc.retail
