@@ -1,4 +1,7 @@
 # RUN
+## About
+This is a sample automation mobile project developed with Robot framework
+
 ## Install
 * You need to be able to run "pip" command, see: https://pip.pypa.io/en/stable/installation/
 * To install the dependencies you need to run this command
