@@ -1,4 +1,3 @@
-# RUN
 ## About
 This is a sample automation mobile project developed with Robot framework
 
@@ -7,13 +6,15 @@ This is a sample automation mobile project developed with Robot framework
 * To install the dependencies you need to run this command
   * pip install -r requirements.txt
 
-## Local
+## RUN
+### Local
 robot --variable environment:local --variable platform:android -d .\report\ .\tests\
 
-## With tags
+### With tags
 robot --variable environment:local --variable platform:android --include=smoke -d .\report\ .\tests\
 
-## Variables
+## Configuration
+### Variables
 * environment
   * local
   * browserstack
@@ -21,11 +22,12 @@ robot --variable environment:local --variable platform:android --include=smoke -
   * android
   * ios
 
-## Tags
+### Tags
 * smoke
 
-## Report
+## Output
+### Report
 Report is located after each run on ./report/report.html
 
-## Log
+### Log
 Log is located after each run on ./report/log.html
