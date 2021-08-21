@@ -15,3 +15,7 @@ Input Password
 Tap Sign In Button
     Hide Keyboard
     Click Element    ${LOGIN_BUTTON}
+
+Get Error Message
+    ${text}=    Get Text    ${ERROR_MESSAGE}    
+    [Return]    ${text}

@@ -1,5 +1,7 @@
 ## About
-This is a sample automation mobile project developed with Robot framework
+This is a sample automation mobile project developed with Robot framework.
+
+**This was tested in a device with the language set in Spanish (Argentina)**
 
 ## Install
 * You need to be able to run "pip" command, see: https://pip.pypa.io/en/stable/installation/
@@ -9,6 +11,9 @@ This is a sample automation mobile project developed with Robot framework
 ## RUN
 ### Local
 robot --variable environment:local --variable platform:android -d .\report\ .\tests\
+
+### Browserstack
+robot --variable environment:browserstack --variable platform:android -d .\report\ .\tests\
 
 ### With tags
 robot --variable environment:local --variable platform:android --include=smoke -d .\report\ .\tests\
@@ -24,6 +29,7 @@ robot --variable environment:local --variable platform:android --include=smoke -
 
 ### Tags
 * smoke
+* fail
 
 ## Output
 ### Report
