@@ -1,4 +1,4 @@
 *** Variables ***
-${ROTATE_BUTTON}    ${EMPTY}
-${FILTER_BUTTON}    ${EMPTY}
-${PRODUCT_TITLE}    ${EMPTY}
+${ROTATE_BUTTON}    accessibility_id=test-Alternar
+${FILTER_BUTTON}    accessibility_id=test-Modal Selector Button
+${PRODUCT_TITLE}    //XCUIElementTypeStaticText[@label='{product}']

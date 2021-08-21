@@ -9,11 +9,13 @@ This is a sample automation mobile project developed with Robot framework.
   * pip install -r requirements.txt
 
 ## RUN
-### Local
+### Local - Android
 robot --variable environment:local --variable platform:android -d .\report\ .\tests\
 
-### Browserstack
+### Browserstack - Android
 robot --variable environment:browserstack --variable platform:android -d .\report\ .\tests\
+### Browserstack - iOS
+robot --variable environment:browserstack --variable platform:ios -d .\report\ .\tests\
 
 ### With tags
 robot --variable environment:local --variable platform:android --include=smoke -d .\report\ .\tests\
