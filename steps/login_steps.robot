@@ -14,7 +14,3 @@ Tap sign in
 Error message ${expected_message} appears
     ${actual_text}=    Get Error Message
     Should Be Equal    ${actual_text}       ${expected_message}
-
-Print variable
-    ${pole}    Get Variable Value    ${prueba}
-    Log        ${pole}
